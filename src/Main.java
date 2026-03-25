@@ -37,7 +37,7 @@ public class Main {
      System.out.println("Первый боксер весит = " + firstBoxerWeightKg + " кг Второй боксер = " + secondBoxerWeightKg + " кг");
      var summOfTwoBoxers = firstBoxerWeightKg + secondBoxerWeightKg;
      System.out.println("Масса двух боксеров = " + summOfTwoBoxers + " кг");
-     var weightDifference = firstBoxerWeightKg - secondBoxerWeightKg;
+     var weightDifference = secondBoxerWeightKg - firstBoxerWeightKg;
      System.out.println("Разница в весе = " + weightDifference + " кг");
      var modulusWeight = secondBoxerWeightKg % firstBoxerWeightKg;
      System.out.println("Остаток от деления между двумя весами = " + modulusWeight);
