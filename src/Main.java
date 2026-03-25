@@ -2,6 +2,7 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
+
      //dog paper cat part
      var dog = 8.0;
      var cat = 3.6;
@@ -15,6 +16,7 @@ public class Main {
      cat = cat - 1.6;
      paper = paper - 7639;
      System.out.println("dog = " + dog + " cat = " + cat + " paper = " + paper);
+
      //friend part
      var friend = 19;
      System.out.println("friend = " + friend);
@@ -22,6 +24,7 @@ public class Main {
      System.out.println("friend = " + friend);
      friend = friend / 7;
      System.out.println("friend = " + friend);
+
      //frog part
      var frog = 3.5;
      System.out.println("frog = " + frog);
@@ -31,6 +34,7 @@ public class Main {
      System.out.println("frog = " + frog);
      frog = frog + 4;
      System.out.println("frog = " + frog);
+
      //boxing part
      var firstBoxerWeightKg = 78.2;
      var secondBoxerWeightKg = 82.7;
@@ -41,7 +45,8 @@ public class Main {
      System.out.println("Разница в весе = " + weightDifference + " кг");
      var modulusWeight = secondBoxerWeightKg % firstBoxerWeightKg;
      System.out.println("Остаток от деления между двумя весами = " + modulusWeight);
-     //work time part точечки для верного деления
+
+     //work time part
      var manHours = 640.0;
      System.out.println("Человекочасы в кампании " + manHours + " часов");
      var workTime = 8.0;
