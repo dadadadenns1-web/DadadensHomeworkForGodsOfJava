@@ -57,8 +57,8 @@ public class Main {
         //Конец условных данных
         System.out.println("Для покраски 1-го класса нужно " + whitePaintPerClass + " банок белой краски и " + brownPaintPerClass + " банок коричневой, а всего банок нужно " + cansOfPaintRequired);
         float ratioBrownToWhitePaint = ((float) brownPaintPerClass / whitePaintPerClass);
-        byte whitePaintRequired = (byte) (cansOfPaintRequired / (1 + ratioBrownToWhitePaint));
-        byte brownPaintRequired = (byte) (whitePaintRequired * ratioBrownToWhitePaint);
+        byte whitePaintRequired = (byte) Math.ceil(cansOfPaintRequired / (1 + ratioBrownToWhitePaint));
+        byte brownPaintRequired = (byte) Math.ceil(whitePaintRequired * ratioBrownToWhitePaint);
         byte numberOfClasses = (byte) (cansOfPaintRequired / (whitePaintPerClass + brownPaintPerClass));
         System.out.println("В школе, где " + numberOfClasses + " классов, нужно " + whitePaintRequired + " банок белой краски и " + brownPaintRequired + " банок коричневой краски");
 
