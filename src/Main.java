@@ -10,7 +10,7 @@ public class Main {
         short shrota = 15000;
         byte bytota = 100;
         int intota = 1000000000;
-        System.out.println("flota <<float>> = " + flota + ", longota <<long>> = " + longota + ", shrota <<short>> = " + shrota + ", bytota <<byte>> = " + bytota + ", intota <<int>> = " + intota + ", doblota <<double>> = " + doblota);
+        System.out.println("Значение переменной flota с типом <<float>> = " + flota + ", значение переменной longota с типом <<long>> = " + longota + ", значение переменной shrota с типом <<short>> = " + shrota + ", значение переменной bytota с типом <<byte>> = " + bytota + ", значение переменной intota с типом <<int>> = " + intota + ", значение переменной doblota с типом <<double>> = " + doblota);
 
         //part 2
         flota = 27.12f;
