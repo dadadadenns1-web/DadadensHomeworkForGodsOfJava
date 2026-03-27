@@ -103,9 +103,9 @@ public class Main {
         denis = (int) (denis * salaryIncrease);
         kristina = (int) (kristina * salaryIncrease);
         System.out.println("Их зарплата в месяц увеличится в " + salaryIncrease + ". Итого Маша будет получать в месяц " + masha + " руб, Денис - " + denis + ", Кристина - " + kristina);
-        masha = masha * 12 - mashaPerYearOld;//Разница годовых зарплат, новой минус старой.
-        denis = denis * 12 - denisPerYearOld;
-        kristina = kristina * 12 - kristinaPerYearOld;
-        System.out.println("Годовой доход вырос у Маши - " + masha + ", у Дениса - " + denis + ", Кристины - " + kristina);
+        int salaryDifferencePerYearMasha = masha * 12 - mashaPerYearOld;//Разница годовых зарплат, новой минус старой.
+        int salaryDifferencePerYearDenis = denis * 12 - denisPerYearOld;
+        int salaryDifferencePerYearKristina = kristina * 12 - kristinaPerYearOld;
+        System.out.println("Годовой доход вырос у Маши - " + salaryDifferencePerYearMasha + ", у Дениса - " + salaryDifferencePerYearDenis + ", Кристины - " + salaryDifferencePerYearKristina);
     }
 }
