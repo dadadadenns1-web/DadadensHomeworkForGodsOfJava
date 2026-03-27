@@ -10,7 +10,7 @@ public class Main {
         short shrota = 15000;
         byte bytota = 100;
         int intota = 1000000000;
-        System.out.println("flota = " + flota + " longota = " + longota + " shrota = " + shrota + " bytota = " + bytota + " intota = " + intota + " doblota = " + doblota);
+        System.out.println("flota <<float>> = " + flota + ", longota <<long>> = " + longota + ", shrota <<short>> = " + shrota + ", bytota <<byte>> = " + bytota + ", intota <<int>> = " + intota + ", doblota <<double>> = " + doblota);
 
         //part 2
         flota = 27.12f;
@@ -20,7 +20,7 @@ public class Main {
         short shrota2 = -159;
         short shrota3 = 27897;
         bytota = 67;
-        System.out.println("flota = " + flota + " longota = " + longota + " flota2 = " + flota2 + " shrota = " + shrota + " shrota2 = " + shrota2 + " shrota3 = " + shrota3 + " bytota = " + bytota);
+        System.out.println("flota <<float>> = " + flota + ", longota <<long>> = " + longota + ", flota2 <<float>> = " + flota2 + ", shrota <<short>> = " + shrota + ", shrota2 <<short>> = " + shrota2 + ", shrota3 <<short>> = " + shrota3 + ", bytota <<byte>> = " + bytota);
 
         //part 3
         byte ludmillaStudents = 23;
@@ -106,6 +106,6 @@ public class Main {
         masha = masha * 12 - mashaPerYearOld;//Разница годовых зарплат, новой минус старой.
         denis = denis * 12 - denisPerYearOld;
         kristina = kristina * 12 - kristinaPerYearOld;
-        System.out.println("Прибавка к годовой зарплате у Маши - " + masha + ", у Дениса - " + denis + ", Кристины - " + kristina);
+        System.out.println("Годовой доход вырос у Маши - " + masha + ", у Дениса - " + denis + ", Кристины - " + kristina);
     }
 }
