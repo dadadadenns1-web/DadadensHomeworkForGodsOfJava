@@ -90,22 +90,22 @@ public class Main {
         System.out.println("Максимально быстро можно похудеть спортсмену за " + minDaysToLoseWeight + " дней, максимально долго " + maxDaysToLoseWeight + " дней, в среднем " + averageDaysToLoseWeight + " дней");
 
         //part 8
-        int masha = 67760;//Текущие зарплаты masha, denis, kristina в месяц
-        int denis = 83690;
-        int kristina = 76230;
+        int mashaPerMonth = 67760;//Текущие зарплаты masha, denis, kristina в месяц
+        int denisPerMonth = 83690;
+        int kristinaPerMonth = 76230;
         float salaryIncrease = 1.1f;
         //Конец условных данных
-        int mashaPerYearOld = masha * 12;
-        int denisPerYearOld = denis * 12;
-        int kristinaPerYearOld = kristina * 12;
-        System.out.println("Маша в месяц получает " + masha + " руб, Денис - " + denis + ", Кристина - " + kristina);
-        masha = (int) (masha * salaryIncrease);// Зарплаты в месяц после повышения
-        denis = (int) (denis * salaryIncrease);
-        kristina = (int) (kristina * salaryIncrease);
-        System.out.println("Их зарплата в месяц увеличится в " + salaryIncrease + ". Итого Маша будет получать в месяц " + masha + " руб, Денис - " + denis + ", Кристина - " + kristina);
-        int salaryDifferencePerYearMasha = masha * 12 - mashaPerYearOld;//Разница годовых зарплат, новой минус старой.
-        int salaryDifferencePerYearDenis = denis * 12 - denisPerYearOld;
-        int salaryDifferencePerYearKristina = kristina * 12 - kristinaPerYearOld;
+        int mashaPerYearOld = mashaPerMonth * 12;
+        int denisPerYearOld = denisPerMonth * 12;
+        int kristinaPerYearOld = kristinaPerMonth * 12;
+        System.out.println("Маша в месяц получает " + mashaPerMonth + " руб, Денис - " + denisPerMonth + ", Кристина - " + kristinaPerMonth);
+        mashaPerMonth = (int) (mashaPerMonth * salaryIncrease);// Зарплаты в месяц после повышения
+        denisPerMonth = (int) (denisPerMonth * salaryIncrease);
+        kristinaPerMonth = (int) (kristinaPerMonth * salaryIncrease);
+        System.out.println("Их зарплата в месяц увеличится в " + salaryIncrease + ". Итого Маша будет получать в месяц " + mashaPerMonth + " руб, Денис - " + denisPerMonth + ", Кристина - " + kristinaPerMonth);
+        int salaryDifferencePerYearMasha = mashaPerMonth * 12 - mashaPerYearOld;//Разница годовых зарплат, новой минус старой
+        int salaryDifferencePerYearDenis = denisPerMonth * 12 - denisPerYearOld;
+        int salaryDifferencePerYearKristina = kristinaPerMonth * 12 - kristinaPerYearOld;
         System.out.println("Годовой доход вырос у Маши - " + salaryDifferencePerYearMasha + ", у Дениса - " + salaryDifferencePerYearDenis + ", Кристины - " + salaryDifferencePerYearKristina);
     }
 }
