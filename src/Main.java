@@ -52,8 +52,8 @@ public class Main {
 
         //part 5
         byte cansOfPaintRequired = 120;
-        byte whitePaintPerClass = 2;
-        byte brownPaintPerClass = 4;
+        byte whitePaintPerClass = 4;
+        byte brownPaintPerClass = 2;
         //Конец условных данных
         System.out.println("Для покраски 1-го класса нужно " + whitePaintPerClass + " банок белой краски и " + brownPaintPerClass + " банок коричневой, а всего банок нужно " + cansOfPaintRequired);
         float ratioBrownToWhitePaint = ((float) brownPaintPerClass / whitePaintPerClass);
@@ -98,7 +98,7 @@ public class Main {
         int mashaPerYearOld = masha * 12;
         int denisPerYearOld = denis * 12;
         int kristinaPerYearOld = kristina * 12;
-        System.out.println("Маша в месяц получает " + 67760 + " руб, Денис - " + denis + ", Кристина - " + kristina);
+        System.out.println("Маша в месяц получает " + masha + " руб, Денис - " + denis + ", Кристина - " + kristina);
         masha = (int) (masha * salaryIncrease);// Зарплаты в месяц после повышения
         denis = (int) (denis * salaryIncrease);
         kristina = (int) (kristina * salaryIncrease);
