@@ -52,8 +52,8 @@ public class Main {
 
         //part 5
         byte cansOfPaintRequired = 120;
-        byte whitePaintPerClass = 4;
-        byte brownPaintPerClass = 2;
+        byte whitePaintPerClass = 2;
+        byte brownPaintPerClass = 4;
         //Конец условных данных
         System.out.println("Для покраски 1-го класса нужно " + whitePaintPerClass + " банок белой краски и " + brownPaintPerClass + " банок коричневой, а всего банок нужно " + cansOfPaintRequired);
         float ratioBrownToWhitePaint = ((float) brownPaintPerClass / whitePaintPerClass);
