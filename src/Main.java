@@ -74,9 +74,9 @@ public class Main {
         int one = 213; //изменяемая переменная
         int two = 25; //изменяемая переменная
         int three = 24; //изменяемая переменная
-        if (one > two && one > three) {
+        if (one >= two && one >= three) {
             System.out.println(one + " - самое большое число");
-        } else if (two > three) {
+        } else if (two >= three) {
             System.out.println(two + " - самое большое число");
         } else {
             System.out.println(three + " - самое большое число");
