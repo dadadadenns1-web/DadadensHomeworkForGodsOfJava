@@ -16,10 +16,8 @@ public class Main {
         byte airTemperatureDegrees = 2; //изменяемая переменная
         byte minTemperatureWithoutHat = 5;
         if (airTemperatureDegrees < minTemperatureWithoutHat) {
-            System.out.println("На улице холодно, нужно надеть шапку");
             System.out.println("На улице " + airTemperatureDegrees + " градусов, нужно надеть шапку");
         } else {
-            System.out.println("На улице тепло, можно идти без шапки");
             System.out.println("На улице " + airTemperatureDegrees + " градусов, можно идти без шапки");
         }
 
