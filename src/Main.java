@@ -57,7 +57,7 @@ public class Main {
 
         //part 5
 
-        byte monthNumber = 11; //изменяемая переменная 1 2 12 - зима; 3 4 5 - весна; 6 7 8 - лето; 9 10 11 - осень;
+        byte monthNumber = 12; //изменяемая переменная 1 2 12 - зима; 3 4 5 - весна; 6 7 8 - лето; 9 10 11 - осень;
         switch (monthNumber) {
             case 1:
             case 2:
