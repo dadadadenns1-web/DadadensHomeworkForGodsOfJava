@@ -3,83 +3,77 @@
 public class Main {
     public static void main(String[] args) {
 
-        //part 1
-        short userAgePart1 = 23; //изменяемая переменная
-        byte ageOfMajority = 18;
-        if (userAgePart1 >= ageOfMajority) {
-            System.out.println("Если возраст человека равен " + userAgePart1 + ", то он совершеннолетний");
+        //part 1 & 2
+        byte clientOS = 0; //0 — iOS, 1 — Android  изменяемая переменная
+        short clientDeviceYear = 2015;//изменяемая переменная
+        boolean iOS = (clientOS == 0);
+        boolean releasedBefore2015 = (clientDeviceYear < 2015);
+        if (iOS && releasedBefore2015) {
+            System.out.println("Установите облегченную версию приложения для iOS по ссылке");
+        } else if (iOS) {
+            System.out.println("Установите версию приложения для iOS по ссылке");
+        } else if (releasedBefore2015) {
+            System.out.println("Установите облегченную версию приложения для Android по ссылке");
         } else {
-            System.out.println("Если возраст человека равен " + userAgePart1 + ", то он не достиг совершеннолетия, нужно немного подождать");
-        }
-
-        //part 2
-        byte airTemperatureDegrees = 2; //изменяемая переменная
-        byte minTemperatureWithoutHat = 5;
-        if (airTemperatureDegrees < minTemperatureWithoutHat) {
-            System.out.println("На улице " + airTemperatureDegrees + " градусов, нужно надеть шапку");
-        } else {
-            System.out.println("На улице " + airTemperatureDegrees + " градусов, можно идти без шапки");
+            System.out.println("Установите версию приложения для Android по ссылке");
         }
 
         //part 3
-        short carSpeed = 100; //изменяемая переменная
-        short speedLimit = 60;
-        if (carSpeed > speedLimit) {
-            System.out.println("Если скорость " + carSpeed + ", то придется заплатить штраф");
+        short year = 2021; //изменяемая переменная
+        short introductionOfLeapYear = 1584;
+        boolean divisibleBy4 = (year % 4 == 0);
+        boolean notDivisibleBy100 = (year % 100 != 0);
+        boolean divisibleBy400 = (year % 400 == 0);
+        boolean leapYear = divisibleBy4 && (divisibleBy400 || notDivisibleBy100) && (year > introductionOfLeapYear); //Если делится на 4 и (делится на 400 или не делится на 100) и больше 1584
+        if (leapYear) {
+            System.out.println(year + " год является високосным");
         } else {
-            System.out.println("Если скорость " + carSpeed + ", то можно ездить спокойно");
+            System.out.println(year + " год не является високосным");
         }
 
         //part 4
-        byte minAgeForWork = 25;
-        byte minAgeForUniversity = 18;
-        byte minAgeForSchool = 7;
-        byte minAgeForKindergarten = 2;
-        short userAgePart4 = 17; //изменяемая переменная
-        if (userAgePart4 >= minAgeForWork) {
-            System.out.println("Если возраст человека равен " + userAgePart4 + ", то ему нужно ходить на работу");
-        } else if (userAgePart4 >= minAgeForUniversity) {
-            System.out.println("Если возраст человека равен " + userAgePart4 + ", то ему нужно ходить в университет");
-        } else if (userAgePart4 >= minAgeForSchool) {
-            System.out.println("Если возраст человека равен " + userAgePart4 + ", то ему нужно ходить в школу");
-        } else if (userAgePart4 >= minAgeForKindergarten) {
-            System.out.println("Если возраст человека равен " + userAgePart4 + ", то ему нужно ходить в детский сад");
+        short deliveryDistance = 95; //изменяемая переменная
+        short firstIntervalBoundary = 20;
+        short maxDistance = 100;
+        short secondIntervalBoundary = 60;
+        byte minDaysToDeliver = 1;
+        byte additionalDay = 1;
+        if (deliveryDistance > maxDistance) {
+            System.out.println("Доставки нет");
+        } else if (deliveryDistance <= firstIntervalBoundary) {
+            System.out.println("Потребуется дней: " + minDaysToDeliver);
+        } else if (deliveryDistance <= secondIntervalBoundary) {
+            System.out.println("Потребуется дней: " + (minDaysToDeliver + additionalDay));
+        } else {
+            System.out.println("Потребуется дней: " + (minDaysToDeliver + additionalDay * 2));
         }
 
         //part 5
-        byte noRestrictionAge = 15;
-        byte minAgeForAttraction = 6;
-        byte childAge = 6; //изменяемая переменная
-        if (childAge >= noRestrictionAge) {
-            System.out.println("Если возраст ребенка равен " + childAge + ", то ему можно кататься на аттракционе без сопровождения взрослого");
-        } else if (childAge >= minAgeForAttraction) {
-            System.out.println("Если возраст ребенка равен " + childAge + ", то ему можно кататься на аттракционе в сопровождении взрослого");
-        } else {
-            System.out.println("Если возраст ребенка равен " + childAge + ", то ему нельзя кататься на аттракционе");
-        }
 
-        //part 6
-        short passengerCarriageCapacity = 102;
-        short passengerCarriageSeats = 60;
-        short passengersInCarriage = 60; //изменяемая переменная
-        if (passengersInCarriage >= passengerCarriageCapacity) {
-            System.out.println("В вагоне нет места для новых пассажиров");
-        } else if (passengersInCarriage >= passengerCarriageSeats) {
-            System.out.println("В вагоне есть только стоячие места");
-        } else {
-            System.out.println("В вагоне есть сидячие места");
-        }
-
-        //part 7
-        int one = 213; //изменяемая переменная
-        int two = 25; //изменяемая переменная
-        int three = 24; //изменяемая переменная
-        if (one >= two && one >= three) {
-            System.out.println(one + " - самое большое число");
-        } else if (two >= three) {
-            System.out.println(two + " - самое большое число");
-        } else {
-            System.out.println(three + " - самое большое число");
+        byte monthNumber = 11; //изменяемая переменная 1 2 12 - зима; 3 4 5 - весна; 6 7 8 - лето; 9 10 11 - осень;
+        switch (monthNumber) {
+            case 1:
+            case 2:
+            case 12:
+                System.out.println("Сейчас зима");
+                break;
+            case 3:
+            case 4:
+            case 5:
+                System.out.println("Сейчас весна");
+                break;
+            case 6:
+            case 7:
+            case 8:
+                System.out.println("Сейчас лето");
+                break;
+            case 9:
+            case 10:
+            case 11:
+                System.out.println("Сейчас осень");
+                break;
+            default:
+                System.out.println("Несуществующий месяц");
         }
     }
 }
