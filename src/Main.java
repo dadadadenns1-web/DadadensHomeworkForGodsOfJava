@@ -45,16 +45,16 @@ public class Main {
         short secondIntervalBoundary = 60;
         byte daysToDeliver = 1;
         byte additionalDay = 1;
-        if (deliveryDistance > maxDistance) {
-            System.out.println("Доставки нет");
-        } else if (deliveryDistance <= firstIntervalBoundary) {
-            System.out.println("Потребуется дней: " + daysToDeliver);
-        } else if (deliveryDistance <= secondIntervalBoundary) {
+        if (deliveryDistance > firstIntervalBoundary) {
             daysToDeliver = (byte) (daysToDeliver + additionalDay);
+        }
+        if (deliveryDistance > secondIntervalBoundary) {
+            daysToDeliver = (byte) (daysToDeliver + additionalDay);
+        }
+        if (deliveryDistance <= maxDistance) {
             System.out.println("Потребуется дней: " + daysToDeliver);
         } else {
-            daysToDeliver = (byte) (daysToDeliver + additionalDay * 2);
-            System.out.println("Потребуется дней: " + daysToDeliver);
+            System.out.println("Доставки нет");
         }
 
         //part 5.
