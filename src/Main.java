@@ -3,10 +3,17 @@
 public class Main {
     public static void main(String[] args) {
 
-        //part 1 & 2
+        //part 1
         byte clientOS = 0; //0 — iOS, 1 — Android  изменяемая переменная
-        short clientDeviceYear = 2015;//изменяемая переменная
         boolean iOS = (clientOS == 0);
+        if (iOS) {
+            System.out.println("Установите версию приложения для iOS по ссылке");
+        } else {
+            System.out.println("Установите версию приложения для Android по ссылке");
+        }
+
+        //part 2
+        short clientDeviceYear = 2015;//изменяемая переменная
         boolean releasedBefore2015 = (clientDeviceYear < 2015);
         if (iOS && releasedBefore2015) {
             System.out.println("Установите облегченную версию приложения для iOS по ссылке");
