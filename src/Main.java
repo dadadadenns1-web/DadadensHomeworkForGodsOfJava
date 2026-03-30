@@ -3,85 +3,127 @@
 public class Main {
     public static void main(String[] args) {
 
-        //part 1 С помощью цикла for выведите в консоль все целые числа от 1 до 10.
+        //part 1 Поиск пятницы
         System.out.println("Задача 1");
 
-        for (int i = 1; i <= 10; i++) {
-            System.out.println(i);
+        int daysInMonth = 31;
+        int firstFriday = 5;
+        int friday = firstFriday; //Для того чтобы firstFriday сохраняла свое значение от 1 до 7 в течении всей задачи
+        for (int day = 1; day <= daysInMonth; day++) { //Это можно написать короче, но для задания нужно пройтись от 1 до 31
+            if (day == friday) {
+                System.out.println("Сегодня пятница, " + day + "-е число. Необходимо подготовить отчет");
+                friday += 7;//шаг в 7 дней
+            }
         }
 
-        //part 2 С помощью цикла for выведите в консоль все целые числа от 10 до 1.
-        System.out.println("Задача 2");
+        //part 2
+        //Часть с использованием do-while
+        System.out.println("Задача 2 часть do-while");
 
-        for (int i = 10; i >= 1; i--) {
-            System.out.println(i);
+        int distanceReached = 0;  //необходимо её использование по условию задачи
+        int notificationDistance = 500;//каждые 500м
+        int marathonDistance = 42195;
+        int distanceLeft;
+        do {
+            distanceLeft = marathonDistance - distanceReached;
+            System.out.println("Держитесь! Осталось " + distanceLeft + " метров");
+            distanceReached += notificationDistance;
+        } while (distanceReached < marathonDistance); //когда достигнет не надо увеличить. Меньше
+
+        //Часть с использованием for
+        System.out.println("Задача 2 часть for");
+
+
+        for (distanceReached = 0; distanceReached < marathonDistance; distanceReached += notificationDistance) {
+            distanceLeft = marathonDistance - distanceReached;
+            System.out.println("Держитесь! Осталось " + distanceLeft + " метров");
         }
 
-        //part 3 Выведите в консоль все четные числа от 0 до 17.
-        System.out.println("Задача 3");
+        //part 3
 
-        for (int i = 0; i <= 17; i += 2) {
-            System.out.println(i);
+        //часть с использованием while
+        System.out.println("Задача 3 часть while");
+
+        int parkingDayNumber = 0; //более правильное значение, чтобы не писать -1 ко дню в выводе
+        int budgetForParking = 700; //БЮДЖЕТ НЕОБХОДИМ ПО УСЛОВИЮ
+        int moneySpent = 0;
+        int parkingTariffForDay = 100;
+
+        while (budgetForParking >= parkingTariffForDay) {
+            if (parkingDayNumber % 5 == 0 && parkingDayNumber != 0) {
+                parkingDayNumber++;
+                continue;
+            }
+            moneySpent += parkingTariffForDay;
+            budgetForParking -= parkingTariffForDay; //вычитание из суммы
+            parkingDayNumber++;
+        }
+        if (parkingDayNumber > 0) {
+            System.out.println("Не хватает бюджета на парковку");
+        } else {
+            System.out.println("Дней парковки: " + parkingDayNumber + " дней; стоимость: " + moneySpent + " рублей");
         }
 
-        //part 4 Выведите в консоль все числа от 10 до −10 от бо́льшего числа к меньшему.
+        //Часть с использованием for
+        System.out.println("Задача 3 часть for");
+
+        parkingDayNumber = 0; //сброс с части while
+        moneySpent = 0;//сброс с части while
+
+        for (budgetForParking = 1000; budgetForParking >= parkingTariffForDay; parkingDayNumber++) {
+            if (parkingDayNumber % 5 == 0 && parkingDayNumber != 0) {
+                continue;
+            }
+            moneySpent += parkingTariffForDay;
+            budgetForParking -= parkingTariffForDay; //вычитание из суммы
+        }
+
+        if (parkingDayNumber > 0) {
+            System.out.println("Дней парковки: " + parkingDayNumber + " дней; стоимость: " + moneySpent + " рублей");
+        } else {
+            System.out.println("Не хватает бюджета на парковку");
+        }
+
+
+        //part 4
         System.out.println("Задача 4");
 
-        for (int i = 10; i >= -10; i--) {
-            System.out.println(i);
+        int month = 0;
+        int total = 0;
+
+        while (true) {
+            month++;
+            total += 15_000; //Сумма вносится в начале месяца
+            if (month % 6 == 0) {
+                total = total + (total * 7) / 100; //ПО ПОСЛЕДОВАТЕЛЬНОСТИ (Если текущий месяц кратен 6, начисляйте 7% от накопленной суммы.) ЗДЕСЬ НЕ ИМЕЕТ ЗНАЧЕНИЯ СКОЛЬКО ЛЕЖАЛО 6 МЕСЯЦЕВ НАЗАД ДЕНЕГ НА СЧЕТЕ
+            }
+            System.out.println("Месяц: " + month + "; сумма: " + total + " рублей");//выводится в консоль в конце месяца
+            if (total >= 12_000_000) {
+                break;
+            }
         }
 
-        //part 5 Напишите программу, которая выводит в консоль все високосные года, начиная с 1904 года до 2096.
-        // В консоль результат должен выводиться в формате: «… год является високосным».
+        //part 5
         System.out.println("Задача 5");
+        int charge = 20;//Текущий уровень заряда в процентах
+        int minute = 0;//Счетчик времени зарядки
+        int overheats = 0;//Количество перегревов
 
-        for (int year = 1904; year <= 2096; year += 4) {
-            System.out.println(year + " год является високосным");
+        while (charge < 100) {
+            if (minute % 10 == 0 && minute != 0) { //Перегрев каждые 10 минут, первый перегрев на 10 минуте
+                overheats++;
+                if (overheats >= 3) {
+                    System.out.println("Зарядка прекращена. Текущий заряд: " + charge + "%");//После трех таких перегревов зарядка прекращается и выводится сообщение «Зарядка прекращена. Текущий заряд: ...%».
+                    break;
+                }
+                System.out.println("Перегрев! зарядка приостановлена на 2 минуты");
+                minute += 2;
+                continue;
+            }
+            minute++;
+            charge += 2;
         }
+        System.out.println("Время зарядки составило " + minute + " минут");//После завершения работы цикла выведите итоговое сообщение: «Время зарядки составило ... минут».
 
-        //part 6 Напишите программу, которая выводит в консоль последовательность чисел: 7 14 21 28 35 42 49 56 63 70 77 84 91 98
-        System.out.println("Задача 6");
-
-        for (int i = 7; i <= 98; i += 7) {
-            System.out.println(i);
-        }
-
-        //part 7 Напишите программу, которая выводит в консоль последовательность чисел: 1 2 4 8 16 32 64 128 256 512
-        System.out.println("Задача 7");
-
-        for (int i = 1; i <= 512; i *= 2) {
-            System.out.println(i);
-        }
-
-        //part 8 Посчитайте с помощью цикла for сумму годовых накоплений, если каждый месяц вы будете откладывать по 29 000 рублей «в банку».
-        // Выведите сумму накоплений за каждый месяц в консоль в формате: «Месяц …, сумма накоплений равна … рублей».
-        System.out.println("Задача 8");
-
-        int saving = 0;
-        for (int month = 1; month <= 12; month++) {
-            saving += 29000;
-            System.out.println("Месяц " + month + ", сумма накоплений равна " + saving + " рублей");
-        }
-
-        //part 9 Перепишите решение задачи выше при условии, что деньги вы откладывать будете не «в банку», а в банк под проценты — 12% годовых.
-        //Выведите сумму накоплений за каждый месяц в консоль в формате: «Месяц …, сумма накоплений равна … рублей».
-        System.out.println("Задача 9");
-
-        // ЛОГИКА РАБОТАЕТ ТОЛЬКО ЕСЛИ СУММА ВНОСИТСЯ В НАЧАЛЕ МЕСЯЦА, А СУММА НАКОПЛЕНИЙ ГОВОРИТСЯ В КОНЦЕ МЕСЯЦА
-        float savingFloat = 0f;
-        for (int month = 1; month <= 12; month++) {
-            savingFloat += 29000;
-            savingFloat *= 1.01f;
-            System.out.println("Месяц " + month + ", сумма накоплений равна " + savingFloat + " рублей");
-        }
-
-        //part 10 Напишите программу, которая выводит в консоль таблицу умножения на 2
-        System.out.println("Задача 10");
-
-        int result;
-        for (int multiplier = 1; multiplier <= 10; multiplier++) {
-            result = 2 * multiplier;
-            System.out.println(2 + "*" + multiplier + "=" + result);
-        }
     }
 }
