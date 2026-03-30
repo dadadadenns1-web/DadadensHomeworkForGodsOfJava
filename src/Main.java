@@ -6,28 +6,28 @@ public class Main {
         //part 1 С помощью цикла for выведите в консоль все целые числа от 1 до 10.
         System.out.println("Задача 1");
 
-        for (byte i = 1; i <= 10; i++) {
+        for (int i = 1; i <= 10; i++) {
             System.out.println(i);
         }
 
         //part 2 С помощью цикла for выведите в консоль все целые числа от 10 до 1.
         System.out.println("Задача 2");
 
-        for (byte i = 10; i >= 1; i--) {
+        for (int i = 10; i >= 1; i--) {
             System.out.println(i);
         }
 
         //part 3 Выведите в консоль все четные числа от 0 до 17.
         System.out.println("Задача 3");
 
-        for (byte i = 0; i <= 17; i = (byte) (i + 2)) {
+        for (int i = 0; i <= 17; i += 2) {
             System.out.println(i);
         }
 
         //part 4 Выведите в консоль все числа от 10 до −10 от бо́льшего числа к меньшему.
         System.out.println("Задача 4");
 
-        for (byte i = 10; i >= -10; i--) {
+        for (int i = 10; i >= -10; i--) {
             System.out.println(i);
         }
 
@@ -35,21 +35,21 @@ public class Main {
         // В консоль результат должен выводиться в формате: «… год является високосным».
         System.out.println("Задача 5");
 
-        for (short year = 1904; year <= 2096; year = (short) (year + 4)) {
+        for (int year = 1904; year <= 2096; year += 4) {
             System.out.println(year + " год является високосным");
         }
 
         //part 6 Напишите программу, которая выводит в консоль последовательность чисел: 7 14 21 28 35 42 49 56 63 70 77 84 91 98
         System.out.println("Задача 6");
 
-        for (byte i = 7; i <= 98; i = (byte) (i + 7)) {
+        for (int i = 7; i <= 98; i += 7) {
             System.out.println(i);
         }
 
         //part 7 Напишите программу, которая выводит в консоль последовательность чисел: 1 2 4 8 16 32 64 128 256 512
         System.out.println("Задача 7");
 
-        for (short i = 1; i <= 512; i = (short) (i * 2)) {
+        for (int i = 1; i <= 512; i *= 2) {
             System.out.println(i);
         }
 
@@ -69,7 +69,7 @@ public class Main {
 
         // ЛОГИКА РАБОТАЕТ ТОЛЬКО ЕСЛИ СУММА ВНОСИТСЯ В НАЧАЛЕ МЕСЯЦА, А СУММА НАКОПЛЕНИЙ ГОВОРИТСЯ В КОНЦЕ МЕСЯЦА
         float savingFloat = 0f;
-        for (byte month = 1; month <= 12; month++) {
+        for (int month = 1; month <= 12; month++) {
             savingFloat += 29000;
             savingFloat *= 1.01f;
             System.out.println("Месяц " + month + " сумма накоплений равна " + savingFloat);
@@ -79,7 +79,7 @@ public class Main {
         System.out.println("Задача 10");
 
         int result;
-        for (byte multiplier = 1; multiplier <= 10; multiplier++) {
+        for (int multiplier = 1; multiplier <= 10; multiplier++) {
             result = 2 * multiplier;
             System.out.println(2 + "*" + multiplier + "=" + result);
         }
