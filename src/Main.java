@@ -3,86 +3,85 @@
 public class Main {
     public static void main(String[] args) {
 
-        //part 1
-        byte clientOS = 0; //0 — iOS, 1 — Android  изменяемая переменная
-        boolean iOS = (clientOS == 0);
-        if (iOS) {
-            System.out.println("Установите версию приложения для iOS по ссылке");
-        } else {
-            System.out.println("Установите версию приложения для Android по ссылке");
+        //part 1 С помощью цикла for выведите в консоль все целые числа от 1 до 10.
+        System.out.println("Задача 1");
+
+        for (byte i = 1; i <= 10; i++) {
+            System.out.println(i);
         }
 
-        //part 2
-        short clientDeviceYear = 2015;//изменяемая переменная
-        boolean releasedBefore2015 = (clientDeviceYear < 2015);
-        if (iOS && releasedBefore2015) {
-            System.out.println("Установите облегченную версию приложения для iOS по ссылке");
-        } else if (iOS) {
-            System.out.println("Установите версию приложения для iOS по ссылке");
-        } else if (releasedBefore2015) {
-            System.out.println("Установите облегченную версию приложения для Android по ссылке");
-        } else {
-            System.out.println("Установите версию приложения для Android по ссылке");
+        //part 2 С помощью цикла for выведите в консоль все целые числа от 10 до 1.
+        System.out.println("Задача 2");
+
+        for (byte i = 10; i >= 1; i--) {
+            System.out.println(i);
         }
 
-        //part 3
-        short year = 2021; //изменяемая переменная
-        short introductionOfLeapYear = 1584;
-        boolean divisibleBy4 = (year % 4 == 0);
-        boolean notDivisibleBy100 = (year % 100 != 0);
-        boolean divisibleBy400 = (year % 400 == 0);
-        boolean leapYear = divisibleBy4 && (divisibleBy400 || notDivisibleBy100) && (year > introductionOfLeapYear); //Если делится на 4 и (делится на 400 или не делится на 100) и больше 1584
-        if (leapYear) {
+        //part 3 Выведите в консоль все четные числа от 0 до 17.
+        System.out.println("Задача 3");
+
+        for (byte i = 0; i <= 17; i = (byte) (i + 2)) {
+            System.out.println(i);
+        }
+
+        //part 4 Выведите в консоль все числа от 10 до −10 от бо́льшего числа к меньшему.
+        System.out.println("Задача 4");
+
+        for (byte i = 10; i >= -10; i--) {
+            System.out.println(i);
+        }
+
+        //part 5 Напишите программу, которая выводит в консоль все високосные года, начиная с 1904 года до 2096.
+        // В консоль результат должен выводиться в формате: «… год является високосным».
+        System.out.println("Задача 5");
+
+        for (short year = 1904; year <= 2096; year = (short) (year + 4)) {
             System.out.println(year + " год является високосным");
-        } else {
-            System.out.println(year + " год не является високосным");
         }
 
-        //part 4
-        short deliveryDistance = 95; //изменяемая переменная
-        short firstIntervalBoundary = 20;
-        short maxDistance = 100;
-        short secondIntervalBoundary = 60;
-        byte daysToDeliver = 1;
-        byte additionalDay = 1;
-        if (deliveryDistance > firstIntervalBoundary) {
-            daysToDeliver = (byte) (daysToDeliver + additionalDay);
-        }
-        if (deliveryDistance > secondIntervalBoundary) {
-            daysToDeliver = (byte) (daysToDeliver + additionalDay);
-        }
-        if (deliveryDistance <= maxDistance) {
-            System.out.println("Потребуется дней: " + daysToDeliver);
-        } else {
-            System.out.println("Доставки нет");
+        //part 6 Напишите программу, которая выводит в консоль последовательность чисел: 7 14 21 28 35 42 49 56 63 70 77 84 91 98
+        System.out.println("Задача 6");
+
+        for (byte i = 7; i <= 98; i = (byte) (i + 7)) {
+            System.out.println(i);
         }
 
-        //part 5.
+        //part 7 Напишите программу, которая выводит в консоль последовательность чисел: 1 2 4 8 16 32 64 128 256 512
+        System.out.println("Задача 7");
 
-        byte monthNumber = 12; //изменяемая переменная 1 2 12 - зима; 3 4 5 - весна; 6 7 8 - лето; 9 10 11 - осень;
-        switch (monthNumber) {
-            case 1:
-            case 2:
-            case 12:
-                System.out.println("Сейчас зима");
-                break;
-            case 3:
-            case 4:
-            case 5:
-                System.out.println("Сейчас весна");
-                break;
-            case 6:
-            case 7:
-            case 8:
-                System.out.println("Сейчас лето");
-                break;
-            case 9:
-            case 10:
-            case 11:
-                System.out.println("Сейчас осень");
-                break;
-            default:
-                System.out.println("Несуществующий месяц");
+        for (short i = 1; i <= 512; i = (short) (i * 2)) {
+            System.out.println(i);
+        }
+
+        //part 8 Посчитайте с помощью цикла for сумму годовых накоплений, если каждый месяц вы будете откладывать по 29 000 рублей «в банку».
+        // Выведите сумму накоплений за каждый месяц в консоль в формате: «Месяц …, сумма накоплений равна … рублей».
+        System.out.println("Задача 8");
+
+        int saving = 0;
+        for (int month = 1; month <= 12; month++) {
+            saving += 29000;
+            System.out.println("Месяц " + month + " сумма накоплений равна " + saving);
+        }
+
+        //part 9 Перепишите решение задачи выше при условии, что деньги вы откладывать будете не «в банку», а в банк под проценты — 12% годовых.
+        //Выведите сумму накоплений за каждый месяц в консоль в формате: «Месяц …, сумма накоплений равна … рублей».
+        System.out.println("Задача 9");
+
+        // ЛОГИКА РАБОТАЕТ ТОЛЬКО ЕСЛИ СУММА ВНОСИТСЯ В НАЧАЛЕ МЕСЯЦА, А СУММА НАКОПЛЕНИЙ ГОВОРИТСЯ В КОНЦЕ МЕСЯЦА
+        float savingFloat = 0f;
+        for (byte month = 1; month <= 12; month++) {
+            savingFloat += 29000;
+            savingFloat *= 1.01f;
+            System.out.println("Месяц " + month + " сумма накоплений равна " + savingFloat);
+        }
+
+        //part 10 Напишите программу, которая выводит в консоль таблицу умножения на 2:
+        System.out.println("Задача 10");
+
+        int result;
+        for (byte multiplier = 1; multiplier <= 10; multiplier++) {
+            result = 2 * multiplier;
+            System.out.println(2 + "*" + multiplier + "=" + result);
         }
     }
 }
