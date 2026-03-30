@@ -59,9 +59,9 @@ public class Main {
             parkingDayNumber++;
         }
         if (parkingDayNumber > 0) {
-            System.out.println("Не хватает бюджета на парковку");
-        } else {
             System.out.println("Дней парковки: " + parkingDayNumber + " дней; стоимость: " + moneySpent + " рублей");
+        } else {
+            System.out.println("Не хватает бюджета на парковку");
         }
 
         //Часть с использованием for
