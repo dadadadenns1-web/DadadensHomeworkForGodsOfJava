@@ -70,7 +70,7 @@ public class Main {
         parkingDayNumber = 0; //сброс с части while
         moneySpent = 0;//сброс с части while
 
-        for (budgetForParking = 1000; budgetForParking >= parkingTariffForDay; parkingDayNumber++) {
+        for (budgetForParking = 700; budgetForParking >= parkingTariffForDay; parkingDayNumber++) {
             if (parkingDayNumber % 5 == 0 && parkingDayNumber != 0) {
                 continue;
             }
