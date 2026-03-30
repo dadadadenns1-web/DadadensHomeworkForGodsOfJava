@@ -60,7 +60,7 @@ public class Main {
         int saving = 0;
         for (int month = 1; month <= 12; month++) {
             saving += 29000;
-            System.out.println("Месяц " + month + " сумма накоплений равна " + saving);
+            System.out.println("Месяц " + month + ", сумма накоплений равна " + saving);
         }
 
         //part 9 Перепишите решение задачи выше при условии, что деньги вы откладывать будете не «в банку», а в банк под проценты — 12% годовых.
@@ -72,7 +72,7 @@ public class Main {
         for (int month = 1; month <= 12; month++) {
             savingFloat += 29000;
             savingFloat *= 1.01f;
-            System.out.println("Месяц " + month + " сумма накоплений равна " + savingFloat);
+            System.out.println("Месяц " + month + ", сумма накоплений равна " + savingFloat);
         }
 
         //part 10 Напишите программу, которая выводит в консоль таблицу умножения на 2
