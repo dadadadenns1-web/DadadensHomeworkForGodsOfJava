@@ -10,7 +10,6 @@ public class Main {
         String firstName = "Ivan";
         String middleName = "Ivanovich";
         String lastName = "Ivanov";
-        //Конец исходных данных
 
         String fullName = lastName + " " + firstName + " " + middleName;
         System.out.println("Ф. И. О. сотрудника — " + fullName);
@@ -18,8 +17,7 @@ public class Main {
         //part 2
         System.out.println("Задача 2");
 
-        fullName = "Ivanov Ivan Ivanovich";//Переназначение из задачи 1, переменная с именем fullName требуется по условию
-        //конец исходных данных
+        fullName = "Ivanov Ivan Ivanovich";//fullName нельзя объявить дважды, переназначение
 
         String capitalFullName = fullName.toUpperCase();
         System.out.println("Данные Ф. И. О. сотрудника для заполнения отчета — " + capitalFullName);
@@ -27,8 +25,7 @@ public class Main {
         //part 3
         System.out.println("Задача 3");
 
-        fullName = "Иванов Семён Семёнович";//Переназначение из задачи 1 и 2, переменная с именем fullName требуется по условию
-        //конец исходных данных
+        fullName = "Иванов Семён Семёнович";//fullName нельзя объявить дважды, переназначение
 
         String fullNameWithoutEWithDots = fullName.replace("ё", "е");
         System.out.println("Данные Ф. И. О. сотрудника — " + fullNameWithoutEWithDots);
