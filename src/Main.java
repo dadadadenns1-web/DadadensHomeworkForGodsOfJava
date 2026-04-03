@@ -41,9 +41,6 @@ public class Main {
 
     //part 3
     public static int checkDeliveryTimeInDays(int deliveryDistance) {
-        if (deliveryDistance < 0) {
-            throw new RuntimeException("deliveryDistance lower than 0");
-        }
         short firstIntervalBoundary = 20;
         short secondIntervalBoundary = 60;
         short maxDistance = 100;
