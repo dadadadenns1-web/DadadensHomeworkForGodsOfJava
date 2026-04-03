@@ -22,7 +22,8 @@ public class Main {
     //part 2
     public static void suggestAppVersion(int clientDeviceYear, int clientOS) {
         if (clientOS < 0 || clientOS > 1) {
-            throw new RuntimeException("operating system not found");
+            System.out.println("Неизвестная операционная система");
+            return;
         }
         int yearNow = LocalDate.now().getYear();
         boolean iOS = (clientOS == 0);//1 - android, 0 - iOS
