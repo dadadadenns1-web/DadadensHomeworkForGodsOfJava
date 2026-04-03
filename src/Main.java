@@ -45,7 +45,7 @@ public class Main {
         short secondIntervalBoundary = 60;
         short maxDistance = 100;
         int daysToDeliver = 1;
-        if (deliveryDistance > maxDistance) {
+        if (deliveryDistance > maxDistance || deliveryDistance < 0) {
             daysToDeliver = -1;
         } else if (deliveryDistance > secondIntervalBoundary) {
             daysToDeliver += 2;
